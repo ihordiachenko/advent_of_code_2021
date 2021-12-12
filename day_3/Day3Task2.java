@@ -3,10 +3,10 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-public class SolutionDay3Task2 {
+public class Day3Task2 {
     public static void main(String[] args) {
         try {
-            var fs = new FileInputStream("./day_3/2/input.txt");
+            var fs = new FileInputStream("./day_3/input.txt");
             var br = new BufferedReader(new InputStreamReader(fs));
 
             int bitLen = 0;

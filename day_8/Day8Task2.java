@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class SolutionDay8Task2 {
+public class Day8Task2 {
     public static void main(String[] args) {
         try {
             var fs = new FileInputStream("./day_8/input.txt");

@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.regex.Pattern;
 
-public class SolutionDay5Task2 {
+public class Day5Task1 {
     public static void main(String[] args) {
         try {
             var fs = new FileInputStream("./day_5/input.txt");
@@ -21,7 +21,7 @@ public class SolutionDay5Task2 {
                 int x2 = Integer.parseInt(m.group(3));
                 int y2 = Integer.parseInt(m.group(4));
 
-                for (int[] point: new VentLine(x1, y1, x2, y2).getPoints(true)) {
+                for (int[] point: new VentLine(x1, y1, x2, y2).getPoints(false)) {
                     var key = String.format("%d:%d", point[0], point[1]);
                     linesByCoordinate.put(key, linesByCoordinate.getOrDefault(key, 0)+1);
                 }

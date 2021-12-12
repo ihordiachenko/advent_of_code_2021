@@ -1,9 +1,9 @@
 import java.io.*;
 
-public class SolutionDay3Task1 {
+public class Day3Task1 {
     public static void main(String[] args) {
         try {
-            var fs = new FileInputStream("./day_3/1/input.txt");
+            var fs = new FileInputStream("./day_3/input.txt");
             var br = new BufferedReader(new InputStreamReader(fs));
 
             var ones = new int[31];

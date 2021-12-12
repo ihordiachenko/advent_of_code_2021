@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class SolutionDay8Task1 {
+public class Day8Task1 {
     public static void main(String[] args) {
         try {
             var fs = new FileInputStream("./day_8/input.txt");

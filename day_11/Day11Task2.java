@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class SolutionDay11Task1 {
+public class Day11Task2 {
     public static void main(String[] args) {
         try {
             var fs = new FileInputStream("./day_11/input.txt");
@@ -18,8 +18,11 @@ public class SolutionDay11Task1 {
             }
 
             int result = 0;
-            for (int day = 0; day < 100; day++) {
-                result += simulateRound(grid);
+            for (int day = 1; day <= 1000; day++) {
+                if (simulateRound(grid)) {
+                    result = day;
+                    break;
+                }
             }
 
             System.out.println(result);
@@ -29,7 +32,7 @@ public class SolutionDay11Task1 {
         }
     }
 
-    static int simulateRound(List<List<Integer>> grid) {
+    static boolean simulateRound(List<List<Integer>> grid) {
         int m = grid.size(), n = grid.get(0).size();
         var flashQ = new LinkedList<int[]>();
         var flashed = new HashSet<Integer>();
@@ -39,7 +42,7 @@ public class SolutionDay11Task1 {
                 if (at(grid, i, j) > 9) {
                     int key = i * n + j;
                     flashed.add(key);
-                    flashQ.push(new int[]{i, j});
+                    flashQ.push(new int[] { i, j });
                 }
             }
         }
@@ -52,30 +55,30 @@ public class SolutionDay11Task1 {
             result++;
             for (int di = 1; di >= -1; di--) {
                 for (int dj = 1; dj >= -1; dj--) {
-                    int i = point[0]+di, j = point[1]+dj;
+                    int i = point[0] + di, j = point[1] + dj;
                     inc(grid, i, j);
 
                     if (at(grid, i, j) <= 9) {
                         continue;
                     }
-                    int key = i*n + j;
+                    int key = i * n + j;
                     if (flashed.contains(key)) {
                         continue;
                     }
 
                     flashed.add(key);
-                    flashQ.push(new int[]{i,j});
+                    flashQ.push(new int[] { i, j });
                 }
             }
         }
 
         // Reset flashed nodes;
-        for (int key: flashed) {
-            int i = key/n, j = key%n;
+        for (int key : flashed) {
+            int i = key / n, j = key % n;
             grid.get(i).set(j, 0);
         }
 
-        return result;
+        return result == m*n;
     }
 
     static int at(List<List<Integer>> grid, int i, int j) {

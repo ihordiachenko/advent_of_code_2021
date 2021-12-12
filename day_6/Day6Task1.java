@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.ArrayList;
 
-public class SolutionDay6Task1 {
+public class Day6Task1 {
     static final int lastDay = 80;
 
     public static void main(String[] args) {

@@ -1,9 +1,10 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
-public class SolutionDay4Task1 {
+public class Day4Task2 {
     public static void main(String[] args) {
         try {
             var fs = new FileInputStream("./day_4/input.txt");
@@ -34,17 +35,21 @@ public class SolutionDay4Task1 {
                 }
             }
 
-            int score = 0;
-outer:      for (int draw: draws) {
+            var winners = new HashSet<Board>();
+            int lastScore = 0;
+            for (int draw: draws) {
                 for (var board: boardsByValue.getOrDefault(draw, new ArrayList<>())) {
+                    if (winners.contains(board)) {
+                        continue;
+                    }
                     if (board.markDraw(draw)) {
-                        score = draw*board.getScore();
-                        break outer;
+                        winners.add(board);
+                        lastScore = draw*board.getScore();
                     }
                 }
             }
 
-            System.out.println(score);
+            System.out.println(lastScore);
 
             br.close();
         } catch (Exception e) {

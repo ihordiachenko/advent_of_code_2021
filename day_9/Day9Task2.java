@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class SolutionDay9Task2 {
+public class Day9Task2 {
     public static void main(String[] args) {
         try {
             var fs = new FileInputStream("./day_9/input.txt");

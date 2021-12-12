@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class SolutionDay10Task1 {
+public class Day10Task1 {
     public static void main(String[] args) {
         try {
             Map<Character, Integer> scoresByBracket = Map.of(

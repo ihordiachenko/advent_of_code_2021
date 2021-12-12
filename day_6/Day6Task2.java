@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SolutionDay6Task2 {
+public class Day6Task2 {
     static final int lastDay = 256;
 
     public static void main(String[] args) {
