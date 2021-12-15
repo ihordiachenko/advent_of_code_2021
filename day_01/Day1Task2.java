@@ -4,7 +4,7 @@ import java.util.LinkedList;
 public class Day1Task2 {
     public static void main(String[] args) {
         try {
-            var fs = new FileInputStream("./day_1/input.txt");
+            var fs = new FileInputStream("./day_01/input.txt");
             var br = new BufferedReader(new InputStreamReader(fs));
 
             String line;

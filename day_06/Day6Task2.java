@@ -8,7 +8,7 @@ public class Day6Task2 {
 
     public static void main(String[] args) {
         try {
-            var fs = new FileInputStream("./day_6/input.txt");
+            var fs = new FileInputStream("./day_06/input.txt");
             var br = new BufferedReader(new InputStreamReader(fs));
 
             String line = br.readLine();

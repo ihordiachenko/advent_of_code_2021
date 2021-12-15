@@ -7,7 +7,7 @@ import java.util.List;
 public class Day4Task2 {
     public static void main(String[] args) {
         try {
-            var fs = new FileInputStream("./day_4/input.txt");
+            var fs = new FileInputStream("./day_04/input.txt");
             var br = new BufferedReader(new InputStreamReader(fs));
 
             var draws = new ArrayList<Integer>();

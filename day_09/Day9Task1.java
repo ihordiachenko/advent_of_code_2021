@@ -4,7 +4,7 @@ import java.util.*;
 public class Day9Task1 {
     public static void main(String[] args) {
         try {
-            var fs = new FileInputStream("./day_9/input.txt");
+            var fs = new FileInputStream("./day_09/input.txt");
             var br = new BufferedReader(new InputStreamReader(fs));
 
             var heatmap = new ArrayList<List<Integer>>();

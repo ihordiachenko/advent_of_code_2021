@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 public class Day5Task1 {
     public static void main(String[] args) {
         try {
-            var fs = new FileInputStream("./day_5/input.txt");
+            var fs = new FileInputStream("./day_05/input.txt");
             var br = new BufferedReader(new InputStreamReader(fs));
 
             var regex = Pattern.compile("(\\d+),(\\d+) -> (\\d+),(\\d+)");

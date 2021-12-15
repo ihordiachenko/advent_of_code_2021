@@ -3,7 +3,7 @@ import java.io.*;
 public class Day2Task1 {
     public static void main(String[] args) {
         try {
-            var fs = new FileInputStream("./day_2/input.txt");
+            var fs = new FileInputStream("./day_02/input.txt");
             var br = new BufferedReader(new InputStreamReader(fs));
 
             int depth = 0, horizontalPosition = 0, aim = 0;
