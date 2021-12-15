@@ -42,10 +42,6 @@ public class Day14Task2 {
         }
     }
 
-
-
-
-
     static Map<String, Long> dp(
         String duplet,
         int daysLeft,
