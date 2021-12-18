@@ -1,19 +1,26 @@
 {
     "java.project.sourcePaths": [
-        "day_9",
-        "day_8",
-        "day_7",
-        "day_6",
-        "day_5",
-        "day_4",
-        "day_3",
-        "day_2",
+        "day_15",
         "day_14",
         "day_13",
         "day_12",
         "day_11",
         "day_10",
-        "day_1",
-        "day_15"
+        "day_16"
+    ],
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-1.8",
+            "path": "/path/to/jdk-8",
+        },
+        {
+            "name": "JavaSE-11",
+            "path": "/path/to/jdk-11",
+        },
+        {
+            "name": "JavaSE-17",
+            "path": "/path/to/jdk-17",
+            "default": true
+        },
     ]
 }
